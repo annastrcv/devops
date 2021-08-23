@@ -12,6 +12,6 @@ def index():
     return render_template('index.html', time=time)
 
 
-app.run(host="127.0.0.1")
+app.run(host="0.0.0.0")
 
 
