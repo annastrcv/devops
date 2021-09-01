@@ -1,3 +1,5 @@
+![example workflow](https://github.com/annastrcv/devops/tree/main/.github/workflows/main.yml/badge.svg)
+
 # DevOps labs
 
 Repository for labs in the course of DevOps, Innopolis University
