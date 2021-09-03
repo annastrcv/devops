@@ -1,4 +1,4 @@
-![example workflow](https://github.com/annastrcv/devops/tree/main/.github/workflows/main.yml/badge.svg)
+[![CI to Docker Hub](https://github.com/annastrcv/devops/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/annastrcv/devops/actions/workflows/main.yml)
 
 # DevOps labs
 
