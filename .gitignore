@@ -3,6 +3,9 @@
 .idea/
 venv/
 jenkins/
+.terraform
+.terraform.lock.hcl
+terraform.tfstate
 
 
 # Distribution / packaging
