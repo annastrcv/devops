@@ -1,0 +1,5 @@
+---
+- name: Pull docker image
+  docker_image:
+    name: annastrcv/msc_time:latest
+    source: pull

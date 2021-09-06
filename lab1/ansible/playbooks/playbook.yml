@@ -1,0 +1,8 @@
+---
+- name: Deploy the app
+  hosts: servers
+  become: true
+
+  roles:
+    - roles/docker
+    - roles/docker_pull
