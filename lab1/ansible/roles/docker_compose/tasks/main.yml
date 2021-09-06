@@ -1,0 +1,54 @@
+---
+- name: install docker compose
+    get_url:
+    url: https://github.com/docker/compose/releases/download/1.27.3/docker-compose-Linux-x86_64
+    dest: /usr/local/bin/docker-compose
+    mode: 755
+
+- name: prune phase
+  shell:
+    cmd: docker images -a -q|xargs -r docker rmi -f
+
+- name: pull phase
+  shell:
+    chdir: projectdir
+    cmd: docker-compose pull
+
+- name: build phase
+  shell:
+    chdir: projectdir
+        cmd: docker-compose build --parallel
+
+- name: save phase
+    shell:
+       cmd: docker save {{item}} | gzip > {{item|b64encode}}.tgz
+    loop: "{{image_list}}"
+
+- name: docker import
+  shell:
+     cmd: docker load < {{item|b64encode}}.tgz
+  loop: "{{image_list}}"
+
+
+- name: Service file creation
+  copy:
+    dest: /etc/systemd/system/docker-compose.service
+    content: |
+      [Unit]
+      Description=Docker Compose Service
+      Requires=docker.service
+      After=docker.service
+      [Service]
+      Type=oneshot
+      RemainAfterExit=true
+      WorkingDirectory=/projectdirectory
+      ExecStart=/usr/local/bin/docker-compose up -d --remove-orphans
+      ExecStop=/usr/local/bin/docker-compose down
+      [Install]
+      WantedBy=multi-user.target
+
+- name: Systemd service activation
+    systemd:
+    name: docker-compose.service
+    enabled: yes
+    state: started
