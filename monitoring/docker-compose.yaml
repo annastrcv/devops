@@ -9,7 +9,10 @@ services:
     logging:
       driver: "json-file"
       options:
+        max-size: "10m"
+        max-file: "5"
         tag: "{{.ImageName}}|{{.Name}}"
+    mem_limit: "256m"
     ports:
       - "3100:3100"
     volumes:
@@ -23,7 +26,10 @@ services:
     logging:
       driver: "json-file"
       options:
+        max-size: "10m"
+        max-file: "5"
         tag: "{{.ImageName}}|{{.Name}}"
+    mem_limit: "256m"
     ports:
       - "9080:9080"
     volumes:
@@ -37,7 +43,10 @@ services:
     logging:
       driver: "json-file"
       options:
+        max-size: "10m"
+        max-file: "5"
         tag: "{{.ImageName}}|{{.Name}}"
+    mem_limit: "256m"
     ports:
       - "3000:3000"
     networks:
@@ -48,8 +57,29 @@ services:
     logging:
       driver: "json-file"
       options:
+        max-size: "10m"
+        max-file: "5"
         tag: "{{.ImageName}}|{{.Name}}"
+    mem_limit: "256m"
     ports:
       - "5000:5000"
     networks:
       - loki
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus_config.yml:/etc/prometheus/prometheus.yml
+    command: --config.file=/etc/prometheus/prometheus.yml
+    networks:
+      - loki
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+        tag: "{{.ImageName}}|{{.Name}}"
+    mem_limit: "256m"

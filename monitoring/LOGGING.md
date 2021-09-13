@@ -4,7 +4,8 @@
 * Docekr
 * GitHub
 
-##Steps for the first setup
+##Loki setup
+###Steps
 1) Clone the Loki repository
 ```
 git clone https://github.com/grafana/loki.git
@@ -31,9 +32,32 @@ docker-compose up
 8) Inside Grafana add Loki `data source` with URL `http://loki:3100`
 ![img_1.png](img_1.png)
 
-##Best Practices 
+###Best Practices 
 
 Using `json-file` as logging driver and tagging.
+
+##Prometheus setup
+###Steps
+1) Add config file for Prometheus 
+2) Update `docker-compose.yml` accordingly
+* add new service Prometheus
+* add log rotation
+* add mem limits 
+3) Update python app, so it generates metrics for Prometheus 
+4) Update Docker Hub image
+5) Run
+```
+docker-compose up
+```
+6) screenshot from `localhost:9090/targets`
+![img.png](img.png)
+7) Dashboard for Prometheus:![img_2.png](img_2.png)
+8) Dashboard for Loki:
+
+
+###Best Practices
+* Used `host.docker.internal` instead of `localhost` for the app inside the Prometheus configuration file
+* Used ready dashboard (imported)
 
 
 

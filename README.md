@@ -47,7 +47,7 @@ For now this progra deosn't contain any helper info, stay tuned!
 * Lab 6
   * [commit](https://github.com/annastrcv/devops/commit/102548586fb45f072bee304d882e2ce25a6080a0) 
 * Lab 7
-  * [commit]()
+  * [commit](https://github.com/annastrcv/devops/commit/a4ad96ee24604ca43cc93892de062fedbde98012)
 * Lab 8
   * [commit]()
 
