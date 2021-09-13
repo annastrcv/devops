@@ -1,4 +1,5 @@
 #reference https://runnable.com/docker/python/dockerize-your-flask-application
+
 FROM python:3.8
 MAINTAINER Anna Startseva "anna.startseva.dir@gmail.com"
 COPY ./requirements.txt /myapp/requirements.txt

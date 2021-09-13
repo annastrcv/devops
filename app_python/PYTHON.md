@@ -6,4 +6,3 @@
 ##Testing
 1) Separate file for `test.py` named according to the convention, so the test runner is able to find the file
 2) Used `pytest` environment for writing tests
-3) 
