@@ -6,7 +6,7 @@ jenkins/
 .terraform
 .terraform.lock.hcl
 terraform.tfstate
-
+minikube-darwin-amd64
 
 # Distribution / packaging
 .Python
