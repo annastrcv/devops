@@ -43,7 +43,7 @@ For now this progra deosn't contain any helper info, stay tuned!
 * Lab 6 [commit](https://github.com/annastrcv/devops/commit/102548586fb45f072bee304d882e2ce25a6080a0) 
 * Lab 7 [commit](https://github.com/annastrcv/devops/commit/a4ad96ee24604ca43cc93892de062fedbde98012)
 * Lab 8 [commit](https://github.com/annastrcv/devops/commit/d113455b9672821e71548d79c49135ad6213af9d)
-* Lab 9 [commit]()
+* Lab 9 [commit](https://github.com/annastrcv/devops/commit/e9659be58f9b825aec44d3b6a034fb6939471cee)
 * Lab 10 [commit]()
 
 ## Improvements based on the feedback
