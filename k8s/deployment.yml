@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msc-time-deployment
+  labels:
+    app: msc-time
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: msc-time
+  template:
+    metadata:
+      labels:
+        app: msc-time
+    spec:
+      containers:
+      - name: msc-time
+        image: annastrcv/msc_time:latest
+        ports:
+        - containerPort: 5000

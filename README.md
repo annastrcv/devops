@@ -36,20 +36,15 @@ For now this progra deosn't contain any helper info, stay tuned!
 
 ## Version History
 
-* Labs 1 & 2
-    * [commit](https://github.com/annastrcv/devops/commit/494f3f882192fd7bc723f249739fe5333a84c0f4) 
-* Lab 3
-    * [commit](https://github.com/annastrcv/devops/commit/60706549dcb8c6e6efa280e0a3c8b5971785d15f) 
-* Lab 4
-  * [commit](https://github.com/annastrcv/devops/commit/1ee217120d2a165350527c2e0726ea1131dac746)
-* Lab 5
-  * [commit](https://github.com/annastrcv/devops/commit/872bf387c182b8bce5f24ee6b86fbc8bd8f659ed) 
-* Lab 6
-  * [commit](https://github.com/annastrcv/devops/commit/102548586fb45f072bee304d882e2ce25a6080a0) 
-* Lab 7
-  * [commit](https://github.com/annastrcv/devops/commit/a4ad96ee24604ca43cc93892de062fedbde98012)
-* Lab 8
-  * [commit]()
+* Labs 1 & 2 [commit](https://github.com/annastrcv/devops/commit/494f3f882192fd7bc723f249739fe5333a84c0f4) 
+* Lab 3 [commit](https://github.com/annastrcv/devops/commit/60706549dcb8c6e6efa280e0a3c8b5971785d15f) 
+* Lab 4 [commit](https://github.com/annastrcv/devops/commit/1ee217120d2a165350527c2e0726ea1131dac746)
+* Lab 5 [commit](https://github.com/annastrcv/devops/commit/872bf387c182b8bce5f24ee6b86fbc8bd8f659ed) 
+* Lab 6 [commit](https://github.com/annastrcv/devops/commit/102548586fb45f072bee304d882e2ce25a6080a0) 
+* Lab 7 [commit](https://github.com/annastrcv/devops/commit/a4ad96ee24604ca43cc93892de062fedbde98012)
+* Lab 8 [commit](https://github.com/annastrcv/devops/commit/d113455b9672821e71548d79c49135ad6213af9d)
+* Lab 9 [commit]()
+* Lab 10 [commit]()
 
 ## Improvements based on the feedback
 
