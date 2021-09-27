@@ -29,6 +29,12 @@ docker run --rm -p 5000:5000 msc_time
 ```
 where `msc_time` is the name of the image
 
+or run
+```
+docker-compose up
+```
+out of the main folder `devops`
+
 ## Help
 
 For now this progra deosn't contain any helper info, stay tuned!
@@ -44,7 +50,9 @@ For now this progra deosn't contain any helper info, stay tuned!
 * Lab 7 [commit](https://github.com/annastrcv/devops/commit/a4ad96ee24604ca43cc93892de062fedbde98012)
 * Lab 8 [commit](https://github.com/annastrcv/devops/commit/d113455b9672821e71548d79c49135ad6213af9d)
 * Lab 9 [commit](https://github.com/annastrcv/devops/commit/e9659be58f9b825aec44d3b6a034fb6939471cee)
-* Lab 10 [commit]()
+* Lab 10 [commit](https://github.com/annastrcv/devops/commit/25c905a201dc0be90525741493d58f2d6b4217c6#diff-17c132990e8e8523ccd403287b6ae761c1cd57f764df278bce7ed310bbddd7f1)
+* Lab 11 [commit](https://github.com/annastrcv/devops/commit/1ad534adeaf6aab879c3f4a7f20cdfb8c16e158e)
+* Lab 12 [commit]()
 
 ## Improvements based on the feedback
 

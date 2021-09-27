@@ -11,18 +11,36 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
+    visits = 0
+    try:
+        with open('/volume/visits.txt') as reader:
+            visits = int(reader.readline())
+    except:
+        pass
+    with open('/volume/visits.txt', 'w') as writer:
+        writer.write(str(visits + 1))
     time_zone = pytz.timezone("Europe/Moscow")
     time = datetime.now(time_zone).strftime('%H:%M:%S')
     return render_template('index.html', time=time)
 
 
+@app.route("/visits")
+def visits():
+    visits = 0
+    try:
+        with open('/volume/visits.txt') as reader:
+            visits = int(reader.readline())
+    except:
+        pass
+    return render_template('visits.html', visits=visits)
+
+
 # provide app's version and deploy environment/config name to set a gauge metric
 register_metrics(app, app_version="v0.0.1", app_config="staging")
-
 
 # Plug metrics WSGI app to your main app with dispatcher
 dispatcher = DispatcherMiddleware(app.wsgi_app, {"/metrics": make_wsgi_app()})
 
 if __name__ == '__main__':
-    #app.run(debug=True, host='0.0.0.0')
+    # app.run(debug=True, host='0.0.0.0')
     run_simple(hostname="0.0.0.0", port=5000, application=dispatcher)

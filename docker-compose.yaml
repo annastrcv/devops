@@ -1,0 +1,8 @@
+version: '3'
+services:
+  msc-time:
+    image: annastrcv/msc_time:latest
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./msc-time-data:/volume
