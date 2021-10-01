@@ -52,7 +52,7 @@ For now this progra deosn't contain any helper info, stay tuned!
 * Lab 9 [commit](https://github.com/annastrcv/devops/commit/e9659be58f9b825aec44d3b6a034fb6939471cee)
 * Lab 10 [commit](https://github.com/annastrcv/devops/commit/25c905a201dc0be90525741493d58f2d6b4217c6#diff-17c132990e8e8523ccd403287b6ae761c1cd57f764df278bce7ed310bbddd7f1)
 * Lab 11 [commit](https://github.com/annastrcv/devops/commit/1ad534adeaf6aab879c3f4a7f20cdfb8c16e158e)
-* Lab 12 [commit]()
+* Lab 12 [commit](https://github.com/annastrcv/devops/commit/a23d8663890ea67cf39b8d2c24631645bd7f5ebd)
 
 ## Improvements based on the feedback
 

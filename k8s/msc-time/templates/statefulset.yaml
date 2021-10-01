@@ -1,10 +1,12 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: {{ include "msc-time.fullname" . }}
   labels:
     {{- include "msc-time.labels" . | nindent 4 }}
 spec:
+  serviceName: "msc-time"
+  podManagementPolicy: "Parallel"
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
@@ -36,6 +38,8 @@ spec:
             - name: config-volume
               mountPath: /files/config.json
               subPath: config.json
+            - name: msc-time-volume
+              mountPath: /volume
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: MY_PASSWORD
@@ -73,3 +77,12 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+
+  volumeClaimTemplates:
+    - metadata:
+        name: msc-time-volume
+      spec:
+        accessModes: [ "ReadWriteMany" ]
+        resources:
+          requests:
+            storage: {{.Values.storagesize}}
