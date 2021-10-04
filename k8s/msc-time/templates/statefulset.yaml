@@ -40,6 +40,8 @@ spec:
               subPath: config.json
             - name: msc-time-volume
               mountPath: /volume
+            - name: workdir
+              mountPath: "/workdir"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: MY_PASSWORD
@@ -61,7 +63,20 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      initContainers:
+        - name: install
+          image: busybox
+          command:
+          - wget
+          - "-O"
+          - "/workdir/index.html"
+          - http://info.cern.ch
+          volumeMounts:
+            - name: workdir
+              mountPath: "/workdir"
       volumes:
+        - name: workdir
+          emptyDir: {}
         - name: config-volume
           configMap:
             name: msc-time-config
